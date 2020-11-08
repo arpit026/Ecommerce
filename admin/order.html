@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Orders</title>
+</head>
+<body onload="readOrder()">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark newColorPurple text-white">
+            <a href="#" class="text-white navbar">
+                <i class="logo1 fas fa-cookie-bite"></i>Shopping Mall
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto menu">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="admin.html">Orders</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./order.html">Edit Orders</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a target="_blank" class="nav-link" href="../index.html">Website</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a target="_blank" class="nav-link" href="../cart.html">Shopping Cart</a>
+                  </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                <a class="text-white nav-link" href="../index.html">
+                  EXIT
+                </a>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div id="firstSection" class="col-md-6">
+                <form class="border p-4 mb-4" id="form">
+                    <div class="form-group">
+                        <label>Order</label>
+                        <input type="text" class="form-control" id="order" placeholder="order">
+                    </div>
+                    <div class="form-group">
+                        <label>Total</label>
+                        <input type="text" class="form-control" id="total" placeholder="total">
+                    </div>
+                    <button type="submit" id="button1" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Order
+                    </button>
+                    <button style="display: none;" id="button2" class="btn btn-success"></button>
+                    <button style="display: none;" id="button3" class="btn btn-danger"></button>
+                </form>
+            </div>
+            <div class="col-md-6" id="cardSection"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.33.1/dist/sweetalert2.all.min.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
